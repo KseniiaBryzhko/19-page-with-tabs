@@ -1,0 +1,129 @@
+/* підключення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+/* кореневий елемент */
+:root {
+  --primary: #fbff00;
+}
+
+/* видима частина вікна браузера */
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+/* основний контейнер */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  margin: 0 200px;
+  min-height: 100vh;
+}
+
+/* бічна панель */
+aside {
+  border-right: 4px solid var(--primary);
+  padding: 100px 35px 0 0;
+}
+
+/* список у бічній панелі */
+aside ul {
+  list-style-type: none;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+
+/* окремі пункти списку панелі */
+aside ul li {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* налаштування трикутників, які імітують криву лінію */
+aside ul li.selected::before,
+aside ul li.selected::after {
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  border-right: 35px solid transparent;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -15px;
+}
+
+aside ul li.selected::before {
+  border-left: 35px solid var(--primary);
+  right: -108px;
+}
+
+aside ul li.selected::after {
+  border-left: 35px solid black;
+  right: -101px;
+}
+
+/* посилання в панелі */
+aside ul li a {
+  text-decoration: none;
+}
+
+/* елемент з номером */
+aside .episode {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  margin-bottom: 5px;
+}
+
+/* елемент із заголовком */
+aside .title {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 27px;
+}
+
+/* налаштування основної контентної частини */
+main {
+  padding: 100px 0 0 75px;
+  display: flex;
+  gap: 50px;
+}
+
+/* заголовок контенту вкладки */
+h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 50px;
+}
+
+/* опис контенту на вкладці */
+p {
+  font-size: 24px;
+  line-height: 38px;
+}
+
+/* посилання до поточного випуску */
+a.more {
+  background: url("./images/arrow.svg") right center no-repeat;
+  font-family: "Roboto Mono", monospace;
+  color: var(--primary);
+  text-transform: uppercase;
+  padding-right: 30px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: padding 0.2s ease-in-out;
+}
+
+/* імітація анімації стріллки за рахунок розширення елементу, де фона є фоном */
+a.more:hover {
+  padding-right: 35px;
+}

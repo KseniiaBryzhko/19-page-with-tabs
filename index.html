@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сторінка з вкладками</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- основний контейнер -->
+  <div class="wrapper">
+
+    <!-- семантичний тег бічної панелі -->
+    <aside>
+
+      <!-- логотип-посилання -->
+      <a href="http://compressed.fm" target="_blank"><img src="./images/logo.svg" alt="compressed.fm"></a>
+
+      <!-- список пунктів-посилань для активації відповідних вкладок -->
+      <ul>
+
+        <!-- окремий пункт-посилання на вкладку -->
+        <li class="selected">
+
+          <!-- той самий момент, коли найкраще обгорнути блочні елементи інлайновим :) -->
+          <a href="#">
+            <div class="episode">Episode 39</div>
+            <div class="title">Tech to Look Forward to in 2022</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="episode">Episode 38</div>
+            <div class="title">2021 Gift Guide</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="episode">Episode 37</div>
+            <div class="title">What Goes into Creating a Course?</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="episode">Episode 36</div>
+            <div class="title">SVGs FTW</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="episode">Episode 35</div>
+            <div class="title">Jobs in Tech. A Crossover Episode with Purrfect.dev</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="episode">Episode 34</div>
+            <div class="title">Getting git</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="episode">Episode 33</div>
+            <div class="title">Small Design Tweaks that Make a Big Difference</div>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- семантичний тег основного контенту -->
+    <main>
+
+      <!-- вміст основної секції -->
+      <!-- обкладинка -->
+      <div class="cover">
+        <img src="./images/cover__episode-39.png" alt="episode 39">
+      </div>
+
+      <!-- описова частина -->
+      <div class="content">
+
+        <!-- заголовок -->
+        <h1>Tech to Look Forward to in 2022</h1>
+
+        <!-- опис -->
+        <p>In this episode, Amy and James discuss the future of web development: Astro, Veet, Supabase, SvelteKit,
+          Redwood.js,
+          Blitz.js, GitHub Co-Pilot, Web Assembly, Blockchain, w3, no-code, and low-code.</p>
+
+        <!-- посилання -->
+        <a href="#" class="more">More</a>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
